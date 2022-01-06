@@ -1,0 +1,16 @@
+---
+- name: "Removing the user {{  rv_user_add_username  }}"
+  user:
+    name: "{{  rv_user_add_username  }}"
+    state: absent
+    remove: yes
+
+- name: "Removing the default group {{  rv_user_add_username  }}"
+  group:
+    name: "{{  rv_user_add_username  }}"
+    state: absent
+
+- name: "Removing sudoers file"
+  file:
+    path: "{{  rv_user_add_sudoers_file  }}"
+    state: absent
