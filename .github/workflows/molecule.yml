@@ -36,7 +36,7 @@ jobs:
       - name: Install test dependencies.
         run: pip3 install -r requirements.txt
 
-      - run: ls && pwd
+      - run: ls -al && pwd
 
       - name: Run Molecule tests.
         run: molecule test
