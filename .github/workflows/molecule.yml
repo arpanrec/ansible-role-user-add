@@ -2,6 +2,10 @@
 
 name: molecule test
 
+defaults:
+  run:
+    working-directory: 'arpanrec.user_add'
+
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -24,8 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          path: arpanrec.user_add
+        # with:
+        #   path: arpanrec.user_add
 
       - name: Install Python
         uses: actions/setup-python@v3
