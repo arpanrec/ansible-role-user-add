@@ -28,8 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        # with:
-        #   path: arpanrec.user_add
+        with:
+          path: arpanrec.user_add
 
       - name: Install Python
         uses: actions/setup-python@v3
