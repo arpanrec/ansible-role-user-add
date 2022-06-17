@@ -1,0 +1,15 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Get user details
+      shell: "id {{  rv_user_add_username  }}"
+      register: userdetails
+      changed_when: false
+
+    - name: Print User Details
+      debug:
+        var: userdetails

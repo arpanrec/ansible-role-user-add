@@ -1,0 +1,6 @@
+- name: Converge
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Bootstrap a host without python installed
+      raw: apt update && apt install python3 -y

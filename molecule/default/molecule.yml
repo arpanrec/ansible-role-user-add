@@ -1,0 +1,20 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: debian
+    image: docker.io/library/debian:bullseye
+    pre_build_image: true
+provisioner:
+  name: ansible
+  playbooks:
+    prepare: prepare.yml
+    converge: converge.yml
+  inventory:
+    host_vars:
+      debian:
+        rv_user_add_username: test
+verifier:
+  name: ansible

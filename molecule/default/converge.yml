@@ -1,0 +1,8 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+
+    - name: "Include arpanrec.user_add"
+      include_role:
+        name: "arpanrec.user_add"
