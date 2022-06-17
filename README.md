@@ -82,11 +82,12 @@ Example Playbook
 Testing
 -------
 
-Prerequisite: `docker`, `python3-pip`, `virtualenv`
+Prerequisite: `docker`, `python3-pip`
 
 ```bash
 git clone git@github.com:arpanrec/ansible-role-user-add.git arpanrec.user_add
 cd arpanrec.user_add
+pip install --user --upgrade virtualenv
 virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
