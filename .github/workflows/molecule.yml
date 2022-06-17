@@ -33,10 +33,12 @@ jobs:
 #           python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
 #           architecture: 'x64'
 
+
+      - run: ls -al && pwd
+
       - name: Install test dependencies.
         run: pip3 install -r requirements.txt
 
-      - run: ls -al && pwd
 
       - name: Run Molecule tests.
         run: molecule test
